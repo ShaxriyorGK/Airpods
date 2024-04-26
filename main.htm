@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Islomjon.uz</title>
+</head>
+
+<body>
+    <div class="form">
+        <form action="" onsubmit=" return sendtelegram()">
+            <input type="text" name="name" id="name" placeholder="Ismingiz" required>
+            <input type="email" name="email" id="email" placeholder="Email manzilingiz" required> <br> <br>
+            <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea> <br> <br>
+            <input type="submit" value="Yuborish" id="btn">
+        </form>
+    </div>
+    <script>
+
+//bot token
+var telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"; // token'ni o'rniga Siz yaratgan Bot tokenini yozing
+//chat id
+var chat_id = 5612986349; // 1111'ni o'rniga habar borishi kerak bo'lgan joyni ID'sini yozing (Batafsil videoda)
+var u_name, email, message;
+var ready = function() {
+    u_name = document.getElementById("name").value;
+    email = document.getElementById("email").value;
+    message = document.getElementById("message").value;
+    message = "Ismi: " + u_name + "\nEmail: " + email + "\nIzoh: " + message;
+};
+var sendtelegram = function() {
+    ready();
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "cache-control": "no-cache"
+        },
+        "data": JSON.stringify({
+            "chat_id": chat_id,
+            "text": message
+        })
+    };
+    $.ajax(settings).done(function(response) {
+        console.log(response);
+    });
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+    return false;
+};
+
+    </script>
+</body>
+
+</html>
