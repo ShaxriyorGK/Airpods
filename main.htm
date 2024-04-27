@@ -21,28 +21,30 @@
             padding: 0;
             margin: 0;
             display: flex;
-            background: #7AEFDB;
+            background: #f6653d;
             align-items: center;
             width: 100%;
+            height: 12%;
         }
         
         footer {
             width: 100%;
-            height: 22%;
+            height: 10%;
             background: #A0EFF8;
             display: flex;
             justify-content: center;
             position: fixed;
-            bottom: -60px;
+            bottom: 0;
         }
         
         h2 {
-            margin: 0;
+            margin: 0.4%;
+            margin-left: 10px;
             padding: 0;
         }
         
         .lang {
-            height: 4%;
+            height: 3.4%;
             position: absolute;
             right: 2px;
             border: none;
@@ -59,7 +61,8 @@
         
         .flex {
             display: flex;
-            margin-top: -40px;
+            position: absolute;
+            bottom: -50px;
         }
         
         .inline {
@@ -71,7 +74,7 @@
             margin-top: 0;
         }
         
-        .form {
+        .for {
             display: none;
         }
         
@@ -106,9 +109,9 @@
         </div>
         
         <div class="form">
-            <form action="" onsubmit="return sendtelegram()">
+            <form action="" onsubmit="return sendtelegram('')">
                 <input type="text" name="name" id="name" placeholder="Ismingiz" required>
-                <input type="tel" name="email" id="email" placeholder="Telefon raqamingiz" required>
+                <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
                 <br>
                 <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
                 <br>
@@ -132,14 +135,78 @@
         r
         r
         y
-        
+        ds
+        sdd
+        xcxc
+        cx
+        cdx
+        cdxx
+        xcxccx
+        xs
+        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
+        ff
+        goTof
+        goTofdf
+        fd
+        <datagrid><datagrid></datagrid></datagrid>
+        fd
+        <fieldset>
+            d
+        </fieldset>
+        <q></q>
+        nghg
         f
         d
         f
         g
         d
         d
-        
+        xcxc
+        cx
+        cdx
+        cdxx
+        xcxccx
+        xs
+        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
+        ff
+        goTof
+        goTofdf
+        fd
+        <datagrid><datagrid></datagrid></datagrid>
+        fd
+        <fieldset>
+            d
+        </fieldset>
+        <q></q>
+        nghg
+        f
+        d
+        f
+        g
+        d
+        xcxc
+        cx
+        cdx
+        cdxx
+        xcxccx
+        xs
+        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
+        ff
+        goTof
+        goTofdf
+        fd
+        <datagrid><datagrid></datagrid></datagrid>
+        fd
+        <fieldset>
+            d
+        </fieldset>
+        <q></q>
+        nghg
+        f
+        d
+        f
+        g
+        d
     </pre>
     
     
@@ -148,6 +215,10 @@
             <div class="inline" onclick="goTo('homepage')">
                 <i class="fa fa-home"></i>
                 <p>Главная</p>
+            </div>
+            <div class="inline" onclick="goTo('Favorites')">
+                <i class="fa fa-heart"></i>
+                <p>Избранные</p>
             </div>
             <div class="inline" onclick="goTo('basket')">
                 <i class="fa fa-shopping-cart"></i>
@@ -165,34 +236,57 @@
 
         telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
         chat_id = 5426182473
-        u_name = email = message = ''
+        u_name = email = message = txt = ''
+        sendtelegram(1)
         ready = () => {
             u_name = document.getElementById("name").value
             tel = document.getElementById("tel").value
             message = document.getElementById("message").value
-            text = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
+            txt = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
         }
-        sendtelegram = () => {
-            ready()
-            settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "cache-control": "no-cache"
-                },
-                "data": JSON.stringify({
-                    "chat_id": chat_id,
-                    "text": text
+        sendtelegram = text => {
+            if(text == '') {
+                ready()
+                settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "cache-control": "no-cache"
+                    },
+                    "data": JSON.stringify({
+                        "chat_id": chat_id,
+                        "text": txt
+                    })
+                }
+                $.ajax(settings).done(function(response) {
+                    console.log(response)
                 })
+                return false
+            } else {
+                settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "cache-control": "no-cache"
+                    },
+                    "data": JSON.stringify({
+                        "chat_id": chat_id,
+                        "text": text
+                    })
+                }
+                $.ajax(settings).done(function(response) {
+                    console.log(response)
+                })
+                return false
             }
-            $.ajax(settings).done(function(response) {
-                console.log(response)
-            })
-            return false
-        };
+        }
+
 
     </script>
 </body>
