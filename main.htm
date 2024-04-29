@@ -290,7 +290,7 @@
                     <h3>Мы в сетях</h3>
                     <div class="tab">
                         <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
-                        <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshopo2022"></a>
+                        <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshop"></a>
                         <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
                     </div>
                 </div>
@@ -367,7 +367,6 @@
     <script>
         
         
-        
         telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
         chat_id = 5426182473
         u_name = email = message = ''
@@ -432,20 +431,25 @@
                 main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
             
                 im = document.querySelector('.images')
+                im0 = im[0]
                 
                 im.children[1].addEventListener('click', function() {
-                    if (im.children[0].src.includes('1.')) {
-                        im.children[0].src = im.children[0].src.replace(/1\./g, '4.')
+                    if (im0.src.includes('1.')) {
+                        im0.src = im0.src.replace(/1\./g, '4.')
                     }
                     else {
-                        im.children[0].src = im.children[0].src.replace((im.children[0].src[59]), (im.children[0].src[59] - 1))
+                        im0.src = im0.src.replace((im0.src[im0.src.indexOf('.') - 1]) + '.', (eval(im0.src[im0.src.indexOf('.') - 1]) - 1 + '.'))
                     }
                 })
             
             })
         }
         
-        
+        str = "The string.includes('.') 3 times.";
+firstDotIndex = str.indexOf('.');
+secondDotIndex = str.indexOf('.', firstDotIndex + 1)
+thirdDotIndex = str.indexOf('.', secondDotIndex + 1)
+console.log(secondDotIndex)
         
     </script>
     
