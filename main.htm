@@ -8,13 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="icon.png">
     <title>Galaxymeshop</title>
     
     <style>
         
         body {
-            margin: 1px;
+            margin: 0;
             padding: 0;
+            background: #D5F3F6;
         }
         
         header {
@@ -23,14 +25,14 @@
             display: flex;
             background: #f6653d;
             align-items: center;
-            width: 100%;
+            width: 106%;
             height: 12%;
         }
         
         footer {
             width: 100%;
             height: 10%;
-            background: #A0EFF8;
+            background: #53DBF3;
             display: flex;
             justify-content: center;
             position: fixed;
@@ -43,39 +45,151 @@
             padding: 0;
         }
         
-        .lang {
+        .display-none, .fas { display: none }
+        
+        #lang {
             height: 3.4%;
             position: absolute;
-            right: 2px;
+            right: -11px;
             border: none;
             border-radius: 20px;
-            background: #06DB33;
+            background: #1AF30D;
         }
         
-        .fas {
-            display: none;
+        main {
+            display: block;
+            justify-content: center;
         }
+        
+        #search {
+            width: 100%;
+            height: 28px;
+            margin: 10px;
+            padding: 2px;
+            border: solid 2px;
+            border-radius: 15px;
+        }
+        
+        #slider {
+            display: flex;
+            justify-content: center;
+            width: 106%;
+        }
+        
+        #sliderImg {
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .hr {
+            width: 106%;
+            height: 2px;
+            background: #f6653d;
+        }
+        
+        .fa-angle-left, .fa-angle-right {
+            position: absolute;
+            top: 140px;
+        }
+        
+        .fa-angle-left {
+            left: 11px;
+        }
+        
+        .fa-angle-right {
+            right: -8px;
+        }
+        
         .fa {
             font-size: 40px;
         }
         
+        #all {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            width: 106%;
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .mahsulot {
+            display: block;
+            border: solid 0.6px;
+            border-radius: 2px;
+            width: 46%;
+            margin: 3px;
+            background: #F5FEFE;
+        }
+        
+        .img {
+            width: 100%;
+        }
+        
+        .top {
+            margin-top: -12px;
+        }
+        
+        .price {
+            margin-right: 8px;
+        }
+        
+        del {
+            color: #909090;
+        }
+        
+        .h {
+            background: #F6FF94;
+        }
+        
+        #heart, #m19-to-cart {
+            font-size: 33px;
+            margin: 2px;
+        }
+        
         .flex {
             display: flex;
-            position: absolute;
-            bottom: -50px;
+            justify-content: center;
         }
         
         .inline {
             text-align: center;
-            margin: 40px;
+            margin: 2px 12px 3px 12px;
         }
         
         p {
             margin-top: 0;
         }
         
-        .for {
-            display: none;
+        #footer {
+            padding: 5px 1px 50px 1px;
+            margin: 0;
+            width: 106%;
+            background: #BEBCC4;
+            
+        }
+        
+        .mainImg {
+            width: 100%;
+        }
+        
+        h3 {
+            font-size: 30px;
+        }
+        
+        #small {
+            font-size: 23px;
+            text-decoration: none;
+            color: #000;
+            margin: 3px;
+        }
+        
+        .tab {
+            margin-left: 20px;
+        }
+        
+        .copy {
+            margin: 28px;
         }
         
     </style>
@@ -98,116 +212,134 @@
     
     <header>
         <h2>Galaxymeshop</h2>
-        <button class="lang" onclick="lang()">Русский</button>
+        <button id="lang" onclick="lang()">Русский</button>
     </header>
     
     
     <main>
         
         <div id="homepage">
-            <div class=""></div>
-        </div>
+            
+            <input type="search" id="search" placeholder="Поиск">
+            
+            <div id="slider">
+                <img
+                    src="img1.png"
+                    alt="slider1"
+                    width="360"
+                    height="160"
+                    id="sliderImg"
+                ><!-- slider1.png, slider2.png... -->
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            
+            <hr class="hr">
+            
+            <div id="all">
+                
+                <div class="flex"><!-- 2 items in it -->
+                    
+                    <div id="m19" class="mahsulot">
+                        <img src="m19-1.png" alt="m19" class="img">
+                        <p>M19 наушники</p>
+                        <div class="flex top">
+                            <div class="price">
+                                <del>69 000 so'm</del>
+                                <br>
+                                <span class="h">49 000 so'm</span>
+                            </div>
+                            <i class="fa fa-heart-o" id="heart"></i>
+                            <i class="fa fa-cart-plus" id="m19-to-cart"></i>
+                        </div>
+                    </div>
+                    
+                    <div id="m19" class="mahsulot">
+                        <img src="m19-1.png" alt="m19" class="img">
+                        <p>M19 наушники</p>
+                        <div class="flex top">
+                            <div class="price">
+                                <del>69 000 so'm</del>
+                                <br>
+                                <span class="h">49 000 so'm</span>
+                            </div>
+                            <i class="fa fa-heart-o" id="heart"></i>
+                            <i class="fa fa-cart-plus" id="m19-to-cart"></i>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- ✍more items✍ -->
+                    
+                    
+                </div><!-- /.flex -->
+                
+            </div><!-- /.all -->
+            
+            <div id="footer">
+                
+                <img src="galaxymeshop.png" alt="galaxymeshop" class="mainImg">
+                <div class="about-us">
+                    <h3>О нас</h3>
+                    <div class="tab">
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="contact">
+                    <h3>Мы в сетях</h3>
+                    <div class="tab">
+                        <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
+                        <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshopo2022"></a>
+                        <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
+                    </div>
+                </div>
+                
+                <div class="copy" align="center">
+                    Все права защищены.
+                    <br>
+                    &copy; 2024 Galaxymeshop
+                </div>
+                
+            </div><!-- /#footer -->
+            
+        </div><!-- /#homepage -->
         
-        <div class="form">
-            <form action="" onsubmit="return sendtelegram('')">
-                <input type="text" name="name" id="name" placeholder="Ismingiz" required>
-                <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
-                <br>
-                <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
-                <br>
-                <input type="submit" value="Yuborish" id="btn">
-            </form>
-        </div>
+        <div class="display-none">
+            
+            <div id="form">
+                <form action="" onsubmit="return sendtelegram('')">
+                    <input type="text" name="name" id="name" placeholder="Ismingiz" required>
+                    <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
+                    <br>
+                    <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
+                    <br>
+                    <input type="submit" value="Yuborish" id="btn">
+                </form>
+            </div>
+            
+            <div id="inside">
+                
+                <div id="inside-m19">
+                      
+                    <div class="images">
+                        <img
+                            src="img1.png"
+                            alt="4"
+                            width="360"
+                            id="sliderImg"
+                        ><!-- img1.png, img2.png... -->
+                        <i class="fa fa-angle-left"></i>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                
+                </div><!-- /#inside-m19 -->
+                
+            </div><!-- /#inside -->
+            
+        </div><!-- /.display-none -->
         
     </main>
-    
-    <pre>
-        rr
-        r
-        r
-        
-        d
-        
-        f
-        re
-        r
-        tt
-        r
-        r
-        y
-        ds
-        sdd
-        xcxc
-        cx
-        cdx
-        cdxx
-        xcxccx
-        xs
-        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
-        ff
-        goTof
-        goTofdf
-        fd
-        <datagrid><datagrid></datagrid></datagrid>
-        fd
-        <fieldset>
-            d
-        </fieldset>
-        <q></q>
-        nghg
-        f
-        d
-        f
-        g
-        d
-        d
-        xcxc
-        cx
-        cdx
-        cdxx
-        xcxccx
-        xs
-        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
-        ff
-        goTof
-        goTofdf
-        fd
-        <datagrid><datagrid></datagrid></datagrid>
-        fd
-        <fieldset>
-            d
-        </fieldset>
-        <q></q>
-        nghg
-        f
-        d
-        f
-        g
-        d
-        xcxc
-        cx
-        cdx
-        cdxx
-        xcxccx
-        xs
-        AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w
-        ff
-        goTof
-        goTofdf
-        fd
-        <datagrid><datagrid></datagrid></datagrid>
-        fd
-        <fieldset>
-            d
-        </fieldset>
-        <q></q>
-        nghg
-        f
-        d
-        f
-        g
-        d
-    </pre>
     
     
     <footer>
@@ -233,62 +365,91 @@
         
     
     <script>
-
+        
+        
+        
         telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
         chat_id = 5426182473
-        u_name = email = message = txt = ''
-        sendtelegram(1)
+        u_name = email = message = ''
+        
+        if (localStorage.getItem('enter') == null) {
+            localStorage.setItem('enter', 'entered')
+            settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache"
+                },
+                "data": JSON.stringify({
+                    "chat_id": chat_id,
+                    "text": "Foydalanuvchilar +1"
+                })
+            }
+            $.ajax(settings).done(function(response) {
+                console.log(response)
+            })
+        }
+        
+        
         ready = () => {
             u_name = document.getElementById("name").value
             tel = document.getElementById("tel").value
             message = document.getElementById("message").value
-            txt = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
+            text = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
         }
-        sendtelegram = text => {
-            if(text == '') {
-                ready()
-                settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-                    "method": "POST",
-                    "headers": {
-                        "Content-Type": "application/json",
-                        "cache-control": "no-cache"
-                    },
-                    "data": JSON.stringify({
-                        "chat_id": chat_id,
-                        "text": txt
-                    })
-                }
-                $.ajax(settings).done(function(response) {
-                    console.log(response)
+        
+        sendtelegram = () => {
+            ready()
+            settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache"
+                },
+                "data": JSON.stringify({
+                    "chat_id": chat_id,
+                    "text": text
                 })
-                return false
-            } else {
-                settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-                    "method": "POST",
-                    "headers": {
-                        "Content-Type": "application/json",
-                        "cache-control": "no-cache"
-                    },
-                    "data": JSON.stringify({
-                        "chat_id": chat_id,
-                        "text": text
-                    })
-                }
-                $.ajax(settings).done(function(response) {
-                    console.log(response)
-                })
-                return false
             }
+            $.ajax(settings).done(function(response) {
+                console.log(response)
+            })
+            return false
         }
-
-
+        
+        
+        main = document.querySelector('main')
+        elements = document.getElementsByClassName('mahsulot');
+        
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', function() {
+                main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
+            
+                im = document.querySelector('.images')
+                
+                im.children[1].addEventListener('click', function() {
+                    if (im.children[0].src[im.children[0].src.indexOf('.') - 1] == 1) {
+                        alert(true)
+                        n = im.children[0].src.replace(im.children[0].src[im.children[0].src.indexOf('.') - 1], im.children[0].alt)
+                        alert(n);
+                        im.children[0].src
+                        alert(n.filter((e, in) => ))
+                    }
+                })
+            
+            })
+        }
+        
+        
+        
     </script>
+    
 </body>
 
 </html>
