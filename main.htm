@@ -1,516 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png">
-    <title>Galaxymeshop</title>
-    
-    <style>
+    <head>
         
-        body {
-            margin: 0;
-            padding: 0;
-            background: #D5F3F6;
-            overflow: visible;
-            width: 100%;
-        }
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png">
+        <title>Galaxymeshop</title>
         
-        header {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            background: #f6653d;
-            align-items: center;
-            width: 100%; /* */
-            height: 12%;
-        }
-        
-        footer {
-            width: 100%;
-           
-            background: #53DBF3;
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            bottom: 0;
-        }
-        
-        h2 {
-            margin: 0.4%;
-            margin-left: 10px;
-            padding: 0;
-        }
-        
-        .display-none, .fas { display: none }
-        
-        #lang {
-            height: 3.9%;
-            position: absolute;
-            right: 2px;
-            border: none;
-            border-radius: 20px;
-            background: #1AF30D;
-        }
-        
-        main {
-            display: block;
-            justify-content: center;
-        }
-        
-        #search {
-            width: 95%;
-            height: 28px;
-            margin: 5px 0;
-            padding: 2px;
-            border: solid 2px;
-            border-radius: 15px;
-        }
-        
-        #slider {
-            display: flex;
-            justify-content: center;
-            width: 100%; /* */
-        }
-        
-        #sliderImg {
-            border: none;
-            width: 100%;
-            border-radius: 8px;
-        }
-        
-        .hr {
-            width: 100%; /* */
-            height: 2px;
-            background: #f6653d;
-        }
-        
-        .fa-angle-left, .fa-angle-right {
-            position: absolute;
-            top: 140px;
-        }
-        
-        .fa-angle-left {
-            left: 2px;
-        }
-        
-        .fa-angle-right {
-            right: 2px;
-        }
-        
-        .fa {
-            font-size: 40px;
-        }
-        
-        #all {
-            display: grid;
-            justify-content: center;
-            text-align: center;
-            width: 100%; /* */
-            margin-top: 12px;
-            margin-bottom: 15px;
-        }
-        
-        .mahsulot {
-            display: block;
-            border: solid 0.6px;
-            border-radius: 2px;
-            width: 46%;
-            margin: 3px;
-            background: #F5FEFE;
-        }
-        
-        .img {
-            width: 100%;
-        }
-        
-        .top {
-            margin-top: -12px;
-        }
-        
-        .price {
-            margin-right: 8px;
-        }
-        
-        del {
-            color: #909090;
-        }
-        
-        .h {
-            background: #F6FF94;
-        }
-        
-        #heart, #m19-to-cart {
-            font-size: 33px;
-            margin: 2px;
-        }
-        
-        .flex {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .inline {
-            text-align: center;
-            margin: 2px 12px 3px 12px;
-        }
-        
-        p {
-            margin-top: 0;
-        }
-        
-        #footer {
-            padding: 5px 1px 20px 1px;
-            margin: 0;
-            width: 100%; /* */
-            background: #BEBCC4;
+        <style>
             
-        }
-        
-        .mainImg {
-            width: 100%;
-        }
-        
-        h3 {
-            font-size: 30px;
-        }
-        
-        #small {
-            font-size: 23px;
-            text-decoration: none;
-            color: #000;
-            margin: 3px;
-        }
-        
-        .tab {
-            margin-left: 20px;
-        }
-        
-        .copy {
-            margin: 28px;
-        }
-        
-    </style>
-    
-</head>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #D5F3F6;
+                overflow: visible;
+                width: 100%;
+            }
+            
+            header {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                background: #f6653d;
+                align-items: center;
+                width: 100%; /* */
+                height: 12%;
+            }
+            
+            footer {
+                width: 100%;
+                background: #53DBF3;
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+            }
+            
+            h2 {
+                margin: 0.4%;
+                margin-left: 10px;
+                padding: 0;
+            }
+            
+            .display-none, .fas { display: none }
+            
+            #lang {
+                height: 3.9%;
+                position: absolute;
+                right: 2px;
+                border: none;
+                border-radius: 20px;
+                background: #1AF30D;
+            }
+            
+            main {
+                display: block;
+                justify-content: center;
+            }
+            
+            #search {
+                width: 95%;
+                height: 28px;
+                margin: 5px 0;
+                padding: 2px;
+                border: solid 2px;
+                border-radius: 12px;
+            }
+            
+            #slider {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%; /* */
+            }
 
-<body>
-    
-    <div class="fas">
-        <i class="fa fa-bars"></i><!-- darkor ne -->
-        <i class="fa fa-cart-plus"></i>
-        <i class="fa fa-home"></i>
-        <i class="fa fa-shopping-cart"></i>
-        <i class="fa fa-user"></i>
-        <i class="fa fa-user-circle"></i>
-        <i class="fa fa-phone"></i>
-        <i class="fa fa-heart-o"></i>
-        <i class="fa fa-heart"></i>
-    </div>
-    
-    <header>
-        <h2>Galaxymeshop</h2>
-        <button id="lang" onclick="lang()">Русский</button>
-    </header>
-    
-    
-    <main>
-        
-        <div id="homepage">
+            .left-right {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                margin-top: 50%;
+            }
             
-            <div class="flex">
-                <input type="search" id="search" placeholder="Поиск">
-            </div>
+            #sliderImg {
+                border: none;
+                width: 80%;
+                border-radius: 8px;
+            }
             
-            <div id="slider">
-                <img
-                    src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/img1.png"
-                    alt="slider1"
-                    height="160"
-                    id="sliderImg"
-                ><!-- slider1.png, slider2.png... -->
-                <i class="fa fa-angle-left"></i>
-                <i class="fa fa-angle-right"></i>
-            </div>
+            .hr {
+                width: 100%; /* */
+                height: 2px;
+                background: #f6653d;
+            }
             
-            <hr class="hr">
+            .fa-angle-left, .fa-angle-right {
+                position: absolute;
+                top: 140px;
+            }
             
-            <div id="all">
+            .fa-angle-left {
+                left: 2px;
+            }
+            
+            .fa-angle-right {
+                right: 2px;
+            }
+            
+            .fa {
+                font-size: 40px;
+            }
+            
+            #all {
+                display: grid;
+                justify-content: center;
+                text-align: center;
+                width: 100%; /* */
+                margin-top: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .mahsulot {
+                display: block;
+                border: solid 0.6px;
+                border-radius: 2px;
+                width: 46%;
+                margin: 3px;
+                background: #F5FEFE;
+                cursor: pointer;
+            }
+            
+            .img {
+                width: 100%;
+            }
+            
+            .top {
+                margin-top: -12px;
+            }
+            
+            .price {
+                margin-right: 8px;
+            }
+            
+            del {
+                color: #909090;
+            }
+            
+            .h {
+                background: #F6FF94;
+            }
+            
+            #heart, #m19-to-cart {
+                font-size: 33px;
+                margin: 2px;
+            }
+            
+            .flex {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .inline {
+                text-align: center;
+                margin: 2px 12px 3px 12px;
+            }
+            
+            p {
+                margin-top: 0;
+            }
+            
+            #footer {
+                padding: 5px 1px 60px 1px;
+                margin: 0;
+                width: 100%; /* */
+                background: #BEBCC4;
                 
-                <div class="flex"><!-- 2 items in it -->
-                    
-                    <div id="m19" class="mahsulot">
-                        <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
-                        <p>M19 наушники</p>
-                        <div class="flex top">
-                            <div class="price">
-                                <del>69 000 so'm</del>
-                                <br>
-                                <span class="h">49 000 so'm</span>
-                            </div>
-                            <i class="fa fa-heart-o" id="heart"></i>
-                            <i class="fa fa-cart-plus" id="m19-to-cart"></i>
-                        </div>
-                    </div>
-                    
-                    <div id="m19" class="mahsulot">
-                        <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
-                        <p>M19 наушники</p>
-                        <div class="flex top">
-                            <div class="price">
-                                <del>69 000 so'm</del>
-                                <br>
-                                <span class="h">49 000 so'm</span>
-                            </div>
-                            <i class="fa fa-heart-o" id="heart"></i>
-                            <i class="fa fa-cart-plus" id="m19-to-cart"></i>
-                        </div>
-                    </div>
-                    
-                    
-                    <!-- ✍more items✍ -->
-                    
-                    
-                </div><!-- /.flex -->
-                
-            </div><!-- /.all -->
+            }
             
-            <div id="footer">
-                
-                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg">
-                <div class="about-us">
-                    <h3>О нас</h3>
-                    <div class="tab">
-                        <p></p>
-                    </div>
-                </div>
-                
-                <div class="contact">
-                    <h3>Мы в сетях</h3>
-                    <div class="tab">
-                        <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
-                        <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshop"></a>
-                        <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
-                    </div>
-                </div>
-                
-                <div class="copy" align="center">
-                    Все права защищены.
-                    <br>
-                    &copy; 2024 Galaxymeshop
-                </div>
-                
-            </div><!-- /#footer -->
+            .mainImg {
+                width: 100%;
+            }
             
-        </div><!-- /#homepage -->
-        
-        <div class="display-none">
+            h3 {
+                font-size: 30px;
+            }
             
-            <div id="form">
-                <form action="" onsubmit="return sendtelegram('')">
-                    <input type="text" name="name" id="name" placeholder="Ismingiz" required>
-                    <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
-                    <br>
-                    <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
-                    <br>
-                    <input type="submit" value="Yuborish" id="btn">
-                </form>
-            </div>
+            #small {
+                font-size: 23px;
+                text-decoration: none;
+                color: #000;
+                margin: 3px;
+            }
             
-            <div id="inside">
-                
-                <div id="inside-m19">
-                      
-                    <div class="images">
-                        <img
-                            src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png"
-                            alt="4"
-                            width="360"
-                            name="1"
-                            id="sliderImg"
-                        ><!-- img1.png, img2.png... -->
+            .tab {
+                margin-left: 20px;
+            }
+            
+            .copy {
+                margin: 28px;
+            }
 
+            #buy {
+                padding: 2% 24%;
+                font-size: 33px;
+                position: fixed;
+                bottom: 12%;
+                border-radius: 35px;
+                background: #1AF30D;
+            }
+            
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <div class="fas">
+            <i class="fa fa-bars"></i><!-- darkor ne -->
+            <i class="fa fa-cart-plus"></i>
+            <i class="fa fa-home"></i>
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-user-circle"></i>
+            <i class="fa fa-phone"></i>
+            <i class="fa fa-heart-o"></i>
+            <i class="fa fa-heart"></i>
+        </div>
+        
+        <header>
+            <h2>Galaxymeshop</h2>
+            <button id="lang" onclick="lang()">Русский</button>
+        </header>
+        
+        
+        <main>
+            
+            <div id="homepage">
+                
+                <div class="flex">
+                    <input type="search" id="search" placeholder="Поиск">
+                </div>
+                
+                <div id="slider">
+                    <img
+                        src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/img1.png"
+                        alt="slider1"
+                        height="360"
+                        id="sliderImg"
+                    ><!-- slider1.png, slider2.png... -->
+                    <div class="left-right">
                         <i class="fa fa-angle-left"></i>
                         <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                
+                <hr class="hr">
+                
+                <div id="all">
+                    
+                    <div class="flex"><!-- 2 items in it -->
+                        
+                        <div id="m19" class="mahsulot">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
+                            <p>M19 наушники</p>
+                            <div class="flex top">
+                                <div class="price">
+                                    <del>69 000 so'm</del>
+                                    <br>
+                                    <span class="h">49 000 so'm</span>
+                                </div>
+                                <i class="fa fa-heart-o" id="heart"></i>
+                                <i class="fa fa-cart-plus" id="m19-to-cart"></i>
+                            </div>
+                        </div>
+                        
+                        <div id="m19" class="mahsulot">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
+                            <p>M19 наушники</p>
+                            <div class="flex top">
+                                <div class="price">
+                                    <del>69 000 so'm</del>
+                                    <br>
+                                    <span class="h">49 000 so'm</span>
+                                </div>
+                                <i class="fa fa-heart-o" id="heart"></i>
+                                <i class="fa fa-cart-plus" id="m19-to-cart"></i>
+                            </div>
+                        </div>
+                        
+                        
 
-                        <div class="display-none">
-                            <!-- id="sliderImg" -->
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4">
+                        <!-- ✍more items✍ -->
+                        
+
+                        
+                    </div><!-- /.flex -->
+                    
+                </div><!-- /.all -->
+                
+                <div id="footer">
+                    
+                    <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg">
+                    <div class="about-us">
+                        <h3>О нас</h3>
+                        <div class="tab">
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact">
+                        <h3>Мы в сетях</h3>
+                        <div class="tab">
+                            <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
+                            <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshop"></a>
+                            <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="copy" align="center">
+                        Все права защищены.
+                        <br>
+                        &copy; 2024 Galaxymeshop
+                    </div>
+                    
+                </div><!-- /#footer -->
+                
+            </div><!-- /#homepage -->
+            
+
+            <div id="favorites">
+
+                a
+
+            </div><!-- /#favourites -->
+
+
+            <div class="display-none">
+                
+                <div id="form">
+                    <form action="" onsubmit="return sendtelegram('')">
+                        <input type="text" name="name" id="name" placeholder="Ismingiz" required>
+                        <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
+                        <br>
+                        <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
+                        <br>
+                        <input type="submit" value="Yuborish" id="btn">
+                    </form>
+                </div>
+                
+                <div id="inside">
+                    
+                    <div id="inside-m19">
+                        
+                        <div class="images flex">
+                            <img
+                                src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png"
+                                alt="4"
+                                width="360"
+                                name="1"
+                                id="sliderImg"
+                            ><!-- img1.png, img2.png... -->
+
+                            <div class="left-right">
+                                <i class="fa fa-angle-left"></i>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+
+                            <div class="display-none others">
+                                <!-- id="sliderImg" -->
+                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
+                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2">
+                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3">
+                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4">
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="text">
+                            <h4>M19 наушники</h4>
+                            <ul>
+                                <li>Android va iOS bilan mos keladi</li>
+                                <li>Boy bass</li>
+                                <li>Zaryadlash vaqti: 1-2 soat</li>
+                                <li>Simsiz interfeyslar: Bluetooth 5.1</li>
+                                <li>PowerBank quvvati 4 tagacha toʻliq zaryadlash uchun yetarli</li>
+                                <li>Batareya muddati: 280 soat</li>
+                                <li>Power Bank bilan Telefoningizni ham zaryadlay olasiz</li>
+                                <li>Power Banki 3500 mA/soat</li>
+                            </ul>
+                        </div>
 
-                    <div class="text">
-                        <h4>M19 наушники</h4>
-                        <p>
+                        <div id="similar"></div><!-- similar products -->
 
-                        </p>
-                    </div>
-                
-                </div><!-- /#inside-m19 -->
-                
+                        <div class="flex">
+                            <button onclick="buy('m19')" id="buy">Заказовать</button>
+                        </div>
 
-                <!-- ✍More items✍ -->
-
-
-            </div><!-- /#inside -->
-            
-        </div><!-- /.display-none -->
-        
-    </main>
-    
-    
-    <footer>
-        <div class="flex">
-            <div class="inline" onclick="goTo('homepage')">
-                <i class="fa fa-home"></i>
-                <p>Главная</p>
-            </div>
-            <div class="inline" onclick="goTo('Favorites')">
-                <i class="fa fa-heart"></i>
-                <p>Избранные</p>
-            </div>
-            <div class="inline" onclick="goTo('basket')">
-                <i class="fa fa-shopping-cart"></i>
-                <p>Корзина</p>
-            </div>
-            <div class="inline" onclick="goTo('profile')">
-                <i class="fa fa-user"></i>
-                <p>Профил</p>
-            </div>
-        </div>
-    </footer>
-        
-    
-    <script>
-        
-        
-        telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
-        chat_id = 5426182473
-        u_name = email = message = before = ''
-        
-        if (localStorage.getItem('enter') == null) {
-            localStorage.setItem('enter', 'entered')
-            settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "cache-control": "no-cache"
-                },
-                "data": JSON.stringify({
-                    "chat_id": chat_id,
-                    "text": "Foydalanuvchilar +1"
-                })
-            }
-            $.ajax(settings).done(function(response) {
-                console.log(response)
-            })
-        }
-        
-        
-        ready = () => {
-            u_name = document.getElementById("name").value
-            tel = document.getElementById("tel").value
-            message = document.getElementById("message").value
-            text = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
-        }
-        
-        sendtelegram = () => {
-            ready()
-            settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "cache-control": "no-cache"
-                },
-                "data": JSON.stringify({
-                    "chat_id": chat_id,
-                    "text": text
-                })
-            }
-            $.ajax(settings).done(function(response) {
-                console.log(response)
-            })
-            return false
-        }
-        
-        
-        main = document.querySelector('main')
-        elements = document.getElementsByClassName('mahsulot');
-        
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].addEventListener('click', function() {
-                main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
-                thisE = this
-
-                im = document.querySelector('.images')
-                im0 = im.children[0]
-                alert(im0.alt)
-                
-                im.children[1].addEventListener('click', function() {
-                    alert(true)
-                    if (im0.name == 1) {
-                        before = document.getElementsByName(im0.alt)[document.getElementById('inside').children.indexOf(thisE)]
-                    } else {
-                        before = document.getElementsByName(eval(im0.name) - 1)[document.getElementById('inside').children.indexOf(thisE)]
-                    }
-
-                    im0.src = before.src
-                    im0.name = before.name
-
-                })
-                
-                im.children[2].addEventListener('click', function() {
+                        <br><br><br><br><br><br><br>
                     
+                    </div><!-- /#inside-m19 -->
+                    
+
+
+
+                    <!-- ✍More items✍ -->
+
+
+
+
+                </div><!-- /#inside -->
+                
+            </div><!-- /.display-none -->
+            
+        </main>
+        
+        
+        <footer>
+            <div class="flex">
+                <div class="inline" onclick="goTo('homepage')">
+                    <i class="fa fa-home"></i>
+                    <p>Главная</p>
+                </div>
+                <div class="inline" onclick="goTo('favorites')">
+                    <i class="fa fa-heart"></i>
+                    <p>Избранные</p>
+                </div>
+                <div class="inline" onclick="goTo('basket')">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>Корзина</p>
+                </div>
+                <div class="inline" onclick="goTo('profile')">
+                    <i class="fa fa-user"></i>
+                    <p>Профил</p>
+                </div>
+            </div>
+        </footer>
+            
+        
+        <script>
+            
+            
+            telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
+            chat_id = 5426182473
+            u_name = email = message = before = ''
+            
+            if (localStorage.getItem('enter') == null) {
+                localStorage.setItem('enter', 'entered')
+                settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "cache-control": "no-cache"
+                    },
+                    "data": JSON.stringify({
+                        "chat_id": chat_id,
+                        "text": "Foydalanuvchilar +1"
+                    })
+                }
+                $.ajax(settings).done(function(response) {
+                    console.log(response)
+                })
+            }
+            
+            
+            ready = () => {
+                u_name = document.getElementById("name").value
+                tel = document.getElementById("tel").value
+                message = document.getElementById("message").value
+                text = "Ismi: " + u_name + "\nTelefon: " + tel + "\nMahsulot: " + message
+            }
+            
+            sendtelegram = () => {
+                ready()
+                settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "cache-control": "no-cache"
+                    },
+                    "data": JSON.stringify({
+                        "chat_id": chat_id,
+                        "text": text
+                    })
+                }
+                $.ajax(settings).done(function(response) {
+                    console.log(response)
+                })
+                return false
+            }
+            
+            
+            main = document.querySelector('main')
+            elements = document.getElementsByClassName('mahsulot');
+            
+            for (var i = 0; i < elements.length; i++) {
+                
+                elements[i].addEventListener('click', function() {
+                    
+                    main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
+                    thisE = this
+
+                    im = document.querySelector('.images')
+                    im0 = im.children[0]
+                    
+                    im.children[1].addEventListener('click', function() {
+                        if (im0.name == 1) {
+                            before = document.getElementsByName(im0.alt)[0]
+                        } else {
+                            before = document.getElementsByName(eval(im0.name) - 1)[0]
+                        }
+
+                        im0.src = before.src
+                        im0.name = before.name
+                    })
+                    
+                    im.children[2].addEventListener('click', function() {
+                        if (im0.name == im0.alt) {
+                            before = document.getElementsByName(1)[0]
+                        } else {
+                            before = document.getElementsByName(eval(im0.name) + 1)[0]
+                        }
+
+                        im0.src = before.src
+                        im0.name = before.name
+                    })
+
                 })
 
-            })
-        }
+            }
+            
+            
+
+            function goTo(p) {
+
+                if (p == 'homepage') {
+                    main.innerHTML = document.getElementById('homepage').innerHTML
+                } else if (p == 'favorites') {
+                    
+                } else if (p == 'basket') {
+                    
+                } else if (p == 'profile') {
+                    
+                }
+
+            }
+
+
+        </script>
         
-        
-    </script>
-    
-</body>
+    </body>
 
 </html>
-
-
-
-/im0.alt\./g
-
-
-        str = "The string.includes('.') 3 times.";
-        firstDotIndex = str.indexOf('.');
-        secondDotIndex = str.indexOf('.', firstDotIndex + 1)
-        thirdDotIndex = str.indexOf('.', secondDotIndex + 1)
-        console.log(secondDotIndex)
-
-
-
-        if (im0.src.includes('1.')) {
-            im0.src = im0.src.replace(/1\./g, im0.alt + '.')
-        }
-        else {
-            im0.src = im0.src.replace((im0.src[im0.src.length - 5] + '.'), (im0.src[im0.src.length - 5] - 1) + '.')
-        }
-
-        if (im0.src.includes(im0.alt + '.')) {
-            im0.src = im0.src.replace(im0.alt + '.', '1.')
-        }
-        else {
-            im0.src = im0.src.replace((im0.src[im0.src.length - 5] + '.'), (eval(im0.src[im0.src.length - 5]) + 1) + '.')
-        }
