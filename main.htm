@@ -1,3 +1,6 @@
+<!-- Created  by Shakhriyor Sanatov -->
+<!-- http://t.me/Shaxriyor_programmer -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +9,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Font Awesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="icon" href="icon.png">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- for h2 title -->
+        <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+        <!-- for h3 name of a product -->
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Tapestry&display=swap" rel="stylesheet">
+        <!-- for button in the description -->
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=M+PLUS+Code+Latin:wght@100..700&family=Poetsen+One&family=Tapestry&display=swap" rel="stylesheet">
+        
+        <style>
+            /* Google Fonts */
+            /* for h1 section names */
+            @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poetsen+One&display=swap');
+        </style>
+        
         <title>Galaxymeshop</title>
         
         <style>
@@ -24,42 +47,97 @@
             header {
                 padding: 0;
                 margin: 0;
+                z-index: 9999999999;
                 display: flex;
                 background: #f6653d;
                 align-items: center;
                 width: 100%; /* */
-                height: 12%;
+                
+                position: fixed;
+                top: 0;
             }
             
             footer {
                 width: 100%;
-                background: #53DBF3;
                 display: flex;
                 justify-content: center;
-                position: fixed;
-                bottom: 0;
             }
             
-            h2 {
-                margin: 0.4%;
-                margin-left: 10px;
+            .header {
+                justify-content: space-betwen!important;
+                text-align: center;
                 padding: 0;
             }
             
-            .display-none, .fas { display: none }
+            .navbar {
+                display: grid
+                place-items: center;
+                align-items: center;
+                justify-content: center;
+            }
             
-            #lang {
-                height: 3.9%;
-                position: absolute;
-                right: 2px;
-                border: none;
-                border-radius: 20px;
-                background: #1AF30D;
+            #menu {
+                margin: 7px 170px;
             }
             
             main {
-                display: block;
+                margin-top: 30px;
+            }
+            
+            h2 {
+                font-family: "Poetsen One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1.37em;
+                position: absolute;
+                left: 3px;
+                margin-top: 3px;
+                padding: 0;
+            }
+            
+            h1 {
+                font-family: "Alegreya", serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                margin: 3px 10px;
+            }
+            
+            .display-none, .fas, .hide {
+                display: none;
+            }
+            
+            
+            .lang {
+                position: absolute;
+                top: 0;
+                right: 3px;
+                border: none;
+                border-radius: 20px;
+                margin-top: 7px;
+            }
+            
+            .toggle {
+                display: grid;
+                background: #687C94;
                 justify-content: center;
+                width: 102%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            #toggle {
+                transition: all 0.3s ease;
+            }
+            
+            .fa-close {
+                font-size: 1.5em;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #95DEF3;
+                margin: 2px;
             }
             
             #search {
@@ -71,101 +149,53 @@
                 border-radius: 12px;
             }
             
-            #slider {
+            .mySwiper {
+                width: 100%;
+                height: 180px;
+                box-shadow: unset!important;
+                margin-left: auto;
+                margin-right: auto;
+                z-index: 0!important;
+            }
+    
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%; /* */
+                box-shadow: unset!important;
+                z-index: 0!important;
             }
-
-            .left-right {
-                display: flex;
-                align-items: center;
+    
+            .swiper-slide img {
+                display: block;
+                width: 100%;
                 height: 100%;
-                margin-top: 50%;
+                object-fit: cover;
+            }
+    
+            .swiper-button-next, .swiper-button-prev {
+                font-size: 3em;
             }
             
-            #sliderImg {
-                border: none;
-                width: 80%;
-                border-radius: 8px;
+            .swiper-button-next {
+                margin-right: -10px;
             }
             
-            .hr {
-                width: 100%; /* */
-                height: 2px;
-                background: #f6653d;
-            }
-            
-            .fa-angle-left, .fa-angle-right {
-                position: absolute;
-                top: 140px;
-            }
-            
-            .fa-angle-left {
-                left: 2px;
-            }
-            
-            .fa-angle-right {
-                right: 2px;
+            .swiper-button-prev {
+                margin-left: -10px;
             }
             
             .fa {
-                font-size: 40px;
+                font-size: 20px;
             }
             
-            #all {
-                display: grid;
-                justify-content: center;
-                text-align: center;
-                width: 100%; /* */
-                margin-top: 12px;
-                margin-bottom: 15px;
-            }
-            
-            .mahsulot {
-                display: block;
-                border: solid 0.6px;
-                border-radius: 2px;
-                width: 46%;
-                margin: 3px;
-                background: #F5FEFE;
-                cursor: pointer;
-            }
-            
-            .img {
-                width: 100%;
-            }
-            
-            .top {
-                margin-top: -12px;
-            }
-            
-            .price {
-                margin-right: 8px;
-            }
-            
-            del {
-                color: #909090;
-            }
-            
-            .h {
-                background: #F6FF94;
-            }
-            
-            #heart, #m19-to-cart {
-                font-size: 33px;
-                margin: 2px;
-            }
             
             .flex {
                 display: flex;
                 justify-content: center;
-            }
-            
-            .inline {
-                text-align: center;
-                margin: 2px 12px 3px 12px;
             }
             
             p {
@@ -173,11 +203,10 @@
             }
             
             #footer {
-                padding: 5px 1px 60px 1px;
+                padding: 10px 3px;
                 margin: 0;
                 width: 100%; /* */
                 background: #BEBCC4;
-                
             }
             
             .mainImg {
@@ -185,7 +214,11 @@
             }
             
             h3 {
-                font-size: 30px;
+                padding: 4px;
+                margin: 1px;
+                font-family: "Tapestry", serif;
+                font-weight: 400;
+                font-style: normal;
             }
             
             #small {
@@ -196,11 +229,12 @@
             }
             
             .tab {
-                margin-left: 20px;
+                margin-left: 12px;
+                margin-top: -20px;
             }
             
             .copy {
-                margin: 28px;
+                margin-top: 17px;
             }
 
             #buy {
@@ -211,6 +245,135 @@
                 border-radius: 35px;
                 background: #1AF30D;
             }
+                
+            .bx--grid-alt {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M9 9H5V5h4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1m1-6h4v4h-4zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm2-5h4v4H5zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1zm2-5h4v4h-4z'/%3E%3C/svg%3E");
+                background-color: currentColor;
+                -webkit-mask-image: var(--svg);
+                mask-image: var(--svg);
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: 115% 115%;
+                mask-size: 115% 115%;
+            }
+            
+            
+            select {
+                color: #D5F3F6;
+                background: #000;
+                border-radius: 20px;
+            }
+            
+            #catalogue {
+                margin-top: 20px;
+            }
+            
+            .catalogue {
+                display: grid;
+            }
+            
+            .product {
+                display: grid;
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                border: solid 9px #555252;
+                border-radius: 7px;
+                width: 92%;
+            }
+            
+            .photos {
+                position: relative;
+            }
+            
+            .photos img {
+                border: none;
+                border-radius: 8px;
+                width: 100%;
+            }
+            
+            .photos span {
+                position: absolute;
+                left: 0;
+                top: 0.6rem;
+                padding: 2px 12px 2px 2px;
+                background: #ff5f55;
+                clip-path: polygon(100% 0%, 70% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+            }
+            
+            .photos i {
+                position: absolute;
+                top: 0.6rem;
+                right: 0.6rem;
+                font-size: 1.5em;
+            }
+            
+            b {
+                position: absolute;
+                font-size: 1.4em;
+                top: 50%;
+            }
+            
+            #ar1 {
+                left: 2%;
+            }
+            
+            #ar2 {
+                right: 2%;
+            }
+            
+            .description {
+                display: grid;
+            }
+            
+            del {
+                margin-left: 1%;
+                color: #909090;
+            }
+            
+            .h {
+                margin-left: 1%;
+                background: #fffc40;
+                width: 12ch;
+                padding: 0;
+                font-weight: 700;
+            }
+            
+            .description button {
+                position: absolute;
+                margin: 8px;
+                right: 13px;
+                border: none;
+                background-color: #1af30d;
+                font-size: 1.07em;
+                border-radius: 12px;
+            }
+            
+            .description button, .copy {
+                font-family: "M PLUS Code Latin", monospace;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+            }
+            
+            .cart {
+                display: block;
+                justify-content: center;
+            }
+            
+            .el-in-cart {
+                border: solid 2px;
+                border-radius: 10px;
+                width: 97%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 8px;
+            }
             
         </style>
         
@@ -218,6 +381,10 @@
 
     <body>
         
+        <div id="homepage"></div>
+        
+        
+        <!-- Font Awesome icons -->
         <div class="fas">
             <i class="fa fa-bars"></i><!-- darkor ne -->
             <i class="fa fa-cart-plus"></i>
@@ -228,159 +395,106 @@
             <i class="fa fa-phone"></i>
             <i class="fa fa-heart-o"></i>
             <i class="fa fa-heart"></i>
+            <i class="fa-solid fa-xmark"></i>
+            <i class="fa fa-book"></i>
         </div>
         
+        
         <header>
-            <h2>Galaxymeshop</h2>
-            <button id="lang" onclick="lang()">Русский</button>
+            <div class="header">
+                
+                <h2 onclick="location.reload()">Galaxymeshop</h2>
+                
+                <nav>
+                    <div class="navbar">
+                        <i class="fa fa-bars" id="menu"></i>
+                        <div class="hide" id="toggle">
+                            <a href="#homepage">
+                                <i class="fa fa-home"></i>
+                                Главная
+                            </a>
+                            <a href="#catalogue">
+                                <i class="bx--grid-alt"></i>
+                                Каталог
+                            </a>
+                            <a href="#cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Корзина
+                            </a>
+                        </div><!-- /#toggle -->
+                    </div><!-- /.navbar -->
+                </nav>
+                
+                <div class="lang">
+                    <select id="language">
+                        <option>Русский</option>
+                        <option>Õzbekcha</option>
+                    </select>
+                </div>
+                
+            </div>
         </header>
         
         
         <main>
             
-            <div id="homepage">
-                
-                <div class="flex">
-                    <input type="search" id="search" placeholder="Поиск">
-                </div>
-                
-                <div id="slider">
-                    <img
-                        src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/img1.png"
-                        alt="slider1"
-                        height="360"
-                        id="sliderImg"
-                    ><!-- slider1.png, slider2.png... -->
-                    <div class="left-right">
-                        <i class="fa fa-angle-left"></i>
-                        <i class="fa fa-angle-right"></i>
-                    </div>
-                </div>
-                
-                <hr class="hr">
-                
-                <div id="all">
-                    
-                    <div class="flex"><!-- 2 items in it -->
-                        
-                        <div id="m19" class="mahsulot">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
-                            <p>M19 наушники</p>
-                            <div class="flex top">
-                                <div class="price">
-                                    <del>69 000 so'm</del>
-                                    <br>
-                                    <span class="h">49 000 so'm</span>
-                                </div>
-                                <i class="fa fa-heart-o" id="heart"></i>
-                                <i class="fa fa-cart-plus" id="m19-to-cart"></i>
-                            </div>
-                        </div>
-                        
-                        <div id="m19" class="mahsulot">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="m19" class="img">
-                            <p>M19 наушники</p>
-                            <div class="flex top">
-                                <div class="price">
-                                    <del>69 000 so'm</del>
-                                    <br>
-                                    <span class="h">49 000 so'm</span>
-                                </div>
-                                <i class="fa fa-heart-o" id="heart"></i>
-                                <i class="fa fa-cart-plus" id="m19-to-cart"></i>
-                            </div>
-                        </div>
-                        
-                        
-
-                        <!-- ✍more items✍ -->
-                        
-
-                        
-                    </div><!-- /.flex -->
-                    
-                </div><!-- /.all -->
-                
-                <div id="footer">
-                    
-                    <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg">
-                    <div class="about-us">
-                        <h3>О нас</h3>
-                        <div class="tab">
-                            <p></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact">
-                        <h3>Мы в сетях</h3>
-                        <div class="tab">
-                            <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
-                            <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshop"></a>
-                            <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
-                        </div>
-                    </div>
-                    
-                    <div class="copy" align="center">
-                        Все права защищены.
-                        <br>
-                        &copy; 2024 Galaxymeshop
-                    </div>
-                    
-                </div><!-- /#footer -->
-                
-            </div><!-- /#homepage -->
+            <div class="flex">
+                <input type="search" id="search" placeholder="Поиск">
+            </div>
             
-
-            <div id="favorites">
-
-                a
-
-            </div><!-- /#favourites -->
-
-
-            <div class="display-none">
+            <section class="popular">
                 
-                <div id="form">
-                    <form action="" onsubmit="return sendtelegram('')">
-                        <input type="text" name="name" id="name" placeholder="Ismingiz" required>
-                        <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
-                        <br>
-                        <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
-                        <br>
-                        <input type="submit" value="Yuborish" id="btn">
-                    </form>
-                </div>
+                <h1>Популярное</h1>
                 
-                <div id="inside">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div><!-- /.swiper -->
+            
+            </section>
+            
+            <section id="catalogue">
+                
+                <h1>Каталог</h1>
+                
+                <div class="catalogue">
                     
-                    <div id="inside-m19">
+                    <div id="m19" class="product">
                         
-                        <div class="images flex">
-                            <img
-                                src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png"
-                                alt="4"
-                                width="360"
-                                name="1"
-                                id="sliderImg"
-                            ><!-- img1.png, img2.png... -->
-
-                            <div class="left-right">
-                                <i class="fa fa-angle-left"></i>
-                                <i class="fa fa-angle-right"></i>
-                            </div>
-
-                            <div class="display-none others">
-                                <!-- id="sliderImg" -->
-                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
-                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2">
-                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3">
-                                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4">
-                            </div>
-
+                        <div class="hide">
+                            <img src="m19-1.png" alt="4" name="1">
+                            <img src="m19-2.png" alt="4" name="2">
+                            <img src="m19-3.png" alt="4" name="3">
+                            <img src="m19-4.png" alt="4" name="4">
                         </div>
-
-                        <div class="text">
-                            <h4>M19 наушники</h4>
+                        
+                        <div class="photos flex">
+                            
+                            <img src="m19-1.png" alt="4" name="1">
+                            <b id="ar1">&larr;</b>
+                            <b id="ar2">&rarr;</b>
+                            <span>-29%</span>
+                            <i class="fa fa-cart-plus" id="m19-to-cart"></i>
+                            
+                        </div>
+                        
+                        <div class="description">
+                            
+                            <button id="m19-btn">Купить</button>
+                            <h3 id="m19-name">M19 наушники</h3>
+                            <del>69 000 сумов</del>
+                            <span class="h" id="m19-price">49 000 сумов</span>
                             <ul>
                                 <li>Android va iOS bilan mos keladi</li>
                                 <li>Boy bass</li>
@@ -391,56 +505,115 @@
                                 <li>Power Bank bilan Telefoningizni ham zaryadlay olasiz</li>
                                 <li>Power Banki 3500 mA/soat</li>
                             </ul>
+                            
                         </div>
-
-                        <div id="similar"></div><!-- similar products -->
-
-                        <div class="flex">
-                            <button onclick="buy('m19')" id="buy">Заказовать</button>
-                        </div>
-
-                        <br><br><br><br><br><br><br>
+                        
+                    </div><!-- /#m19.product -->
                     
-                    </div><!-- /#inside-m19 -->
                     
-
-
-
-                    <!-- ✍More items✍ -->
-
-
-
-
-                </div><!-- /#inside -->
+                    
+                    
+                    <!-- ================= -->
+                    <!-- ✍more products✍ -->
+                    <!-- ================= -->
+                    
+                    
+                    
+                    
+                    
+                </div><!-- /.catalogue -->
                 
-            </div><!-- /.display-none -->
+            </section>
+            
+            <section id="cart">
+                
+                <h1>Корзина</h1>
+                
+                <div class="cart">
+                    <div class="flex"><i>Пусто</i></div>
+                    <!-- The products will dynamically join and save in LOCAL STORAGE -->
+                </div>
+                
+            </section>
             
         </main>
         
         
         <footer>
-            <div class="flex">
-                <div class="inline" onclick="goTo('homepage')">
-                    <i class="fa fa-home"></i>
-                    <p>Главная</p>
+            <div id="footer">
+                <img src="galaxymeshop.png" alt="galaxymeshop" class="mainImg">
+                <div class="about-us">
+                    <h3>О нас</h3>
+                    <div class="tab">
+                        <p></p>
+                    </div>
                 </div>
-                <div class="inline" onclick="goTo('favorites')">
-                    <i class="fa fa-heart"></i>
-                    <p>Избранные</p>
+                    
+                <div class="contact">
+                    <h3>Мы в сетях</h3>
+                    <div class="tab">
+                        <a class="fa fa-phone" id="small" href="tel: +998 95 455 00 24"></a>
+                        <a class="fa fa-telegram" id="small" href="https://t.me/galaxymeshop"></a>
+                        <a class="fa fa-instagram" id="small" href="https://www.instagram.com/galaxymeshop?igsh=N3Awc3Z6ZHR2ZHlx"></a>
+                    </div>
                 </div>
-                <div class="inline" onclick="goTo('basket')">
-                    <i class="fa fa-shopping-cart"></i>
-                    <p>Корзина</p>
+                
+                <div class="copy" align="center">
+                    Все права защищены.
+                    <br>
+                    &copy; 2024 Galaxymeshop
                 </div>
-                <div class="inline" onclick="goTo('profile')">
-                    <i class="fa fa-user"></i>
-                    <p>Профил</p>
-                </div>
-            </div>
+                
+            </div><!-- /#footer -->
         </footer>
-            
+        
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         
         <script>
+            
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                effect: 'cube',
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            })
+            
+            
+            im = document.querySelector('.photos')
+            im0 = im.children[0]
+                        
+            im.children[1].addEventListener('click', function() {
+                if (im0.name == 1) {
+                    before = document.getElementsByName(im0.alt)[0]
+                } else {
+                    before = document.getElementsByName(eval(im0.name) - 1)[0]
+                }
+    
+                im0.src = before.src
+                im0.name = before.name
+            })
+                        
+            im.children[2].addEventListener('click', function() {
+                if (im0.name == im0.alt) {
+                    before = document.getElementsByName(1)[0]
+                } else {
+                    before = document.getElementsByName(eval(im0.name) + 1)[0]
+                }
+    
+                im0.src = before.src
+                im0.name = before.name
+            })
+            
             
             
             telegram_bot_id = "7061132041:AAGn_ipGpipUdD3E99Wdj48-1S-6Ewp6m6w"
@@ -498,65 +671,177 @@
                 return false
             }
             
+            toggle = document.querySelector('#toggle')
+            c = 'class'
             
-            main = document.querySelector('main')
-            elements = document.getElementsByClassName('mahsulot');
-            
-            for (var i = 0; i < elements.length; i++) {
-                
-                elements[i].addEventListener('click', function() {
-                    
-                    main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
-                    thisE = this
-
-                    im = document.querySelector('.images')
-                    im0 = im.children[0]
-                    
-                    im.children[1].addEventListener('click', function() {
-                        if (im0.name == 1) {
-                            before = document.getElementsByName(im0.alt)[0]
-                        } else {
-                            before = document.getElementsByName(eval(im0.name) - 1)[0]
-                        }
-
-                        im0.src = before.src
-                        im0.name = before.name
-                    })
-                    
-                    im.children[2].addEventListener('click', function() {
-                        if (im0.name == im0.alt) {
-                            before = document.getElementsByName(1)[0]
-                        } else {
-                            before = document.getElementsByName(eval(im0.name) + 1)[0]
-                        }
-
-                        im0.src = before.src
-                        im0.name = before.name
-                    })
-
-                })
-
-            }
-            
-            
-
-            function goTo(p) {
-
-                if (p == 'homepage') {
-                    main.innerHTML = document.getElementById('homepage').innerHTML
-                } else if (p == 'favorites') {
-                    
-                } else if (p == 'basket') {
-                    
-                } else if (p == 'profile') {
-                    
+            document.querySelector('#menu').addEventListener('click', function() {
+                if (this.getAttribute(c) == 'fa fa-bars') {
+                    this.setAttribute(c, 'fa fa-close')
+                    toggle.setAttribute(c, 'toggle')
+                } else {
+                    this.setAttribute(c, 'fa fa-bars')
+                    toggle.setAttribute(c, 'hide')
                 }
-
+            })
+            
+            // Price length
+            h = document.querySelectorAll('.h') 
+            for (i = 0; i < h.length; i++) {
+                h[i].style.width = h[i].innerHTML.length + 'ch'
             }
-
-
+            
+            product = document.querySelectorAll('.product')
+            cart = document.querySelector('.cart')
+            
+            for (j = 0; j < product.length; j++) {
+                
+                id = product[j].id
+                document.querySelector('#' + id + '-to-cart').addEventListener('click', function() {
+                    newEl = `
+                        <div class="el-in-cart flex" onclick="alert(true)">
+                            <img src="${id}-1.png" alt="" height="40">
+                            <h3>${document.querySelector('#'+ id + '-name').innerHTML}</h3>
+                            <span>${document.querySelector('#' + id + '-price').innerHTML}</span>
+                        </div>
+                    `
+                    if (cart.innerHTML.includes('Пусто')) {
+                        cart.innerHTML = newEl
+                        alert(true)
+                    } else {
+                        cart.innerHTML += newEl
+                    }
+                })
+                
+            }
+            
+            
         </script>
         
     </body>
 
 </html>
+
+<div style="display: none;">
+            function forProd() {
+                
+                for (var i = 0; i < elements.length; i++) {
+                    
+                    elements[i].addEventListener('click', function() {
+                        
+                        main.innerHTML = document.querySelector('#inside').querySelector('#inside-' + this.id).innerHTML
+                        thisE = this
+    
+                        im = document.querySelector('.photos')
+                        im0 = im.children[0]
+                        
+                        im.children[1].addEventListener('click', function() {
+                            if (im0.name == 1) {
+                                before = document.getElementsByName(im0.alt)[0]
+                            } else {
+                                before = document.getElementsByName(eval(im0.name) - 1)[0]
+                            }
+    
+                            im0.src = before.src
+                            im0.name = before.name
+                        })
+                        
+                        im.children[2].addEventListener('click', function() {
+                            if (im0.name == im0.alt) {
+                                before = document.getElementsByName(1)[0]
+                            } else {
+                                before = document.getElementsByName(eval(im0.name) + 1)[0]
+                            }
+    
+                            im0.src = before.src
+                            im0.name = before.name
+                        })
+    
+                    })
+    
+                }
+                
+            }
+            
+            
+             main = document.querySelector('main')
+            homepage = document.getElementById('homepage')
+            favourites = document.getElementById('favourites')
+            cart = document.getElementById('cart')
+            profile = document.getElementById('profile')
+            elements = document.getElementsByClassName('mahsulot')
+            main.innerHTML = homepage.innerHTML
+            
+            
+            
+            <div id="form">
+                <form action="" onsubmit="return sendtelegram('')">
+                    <input type="text" name="name" id="name" placeholder="Ismingiz" required>
+                    <input type="tel" name="tel" id="tel" placeholder="Telefon raqamingiz" required>
+                    <br>
+                    <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea>
+                    <br>
+                    <input type="submit" value="Yuborish" id="btn">
+                </form>
+            </div>
+            
+            
+            
+            #all {
+                display: grid;
+                justify-content: center;
+                text-align: center;
+                width: 100%; /* */
+                margin-top: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .mahsulot {
+                display: block;
+                border: solid 0.6px;
+                border-radius: 2px;
+                width: 46%;
+                margin: 3px;
+                background: #F5FEFE;
+                cursor: pointer;
+            }
+            
+            .img {
+                width: 100%;
+            }
+            
+            .top {
+                margin-top: -12px;
+            }
+            
+            .price {
+                margin-right: 8px;
+            }
+            
+            del {
+                color: #909090;
+            }
+            
+            .h {
+                background: #F6FF94;
+            }
+            
+            #heart, #m19-to-cart {
+                font-size: 33px;
+                margin: 2px;
+            }
+            
+            
+            
+            
+            elInCart = document.querySelectorAll('.el-in-cart')
+            
+            for (k = 0; k < elInCart.length; k++) {
+                
+                this1 = elInCart[k]
+                this1.addEventListener('click', function() {
+                    alert(true)
+                })
+            }
+            
+            
+</div>
