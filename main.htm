@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link rel="icon" href="icon.png">
+        <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +48,6 @@
                 padding: 0;
                 margin: 0;
                 z-index: 9999999999;
-                display: flex;
                 background: #f6653d;
                 align-items: center;
                 width: 100%; /* */
@@ -67,10 +66,11 @@
                 justify-content: space-betwen!important;
                 text-align: center;
                 padding: 0;
+                background: #f6653d;
             }
             
             .navbar {
-                display: grid
+                display: grid;
                 place-items: center;
                 align-items: center;
                 justify-content: center;
@@ -121,13 +121,15 @@
                 display: grid;
                 background: #687C94;
                 justify-content: center;
-                width: 102%;
+                width: 100%;
                 margin: 0;
                 padding: 0;
             }
             
             #toggle {
                 transition: all 0.3s ease;
+                width: 100%;
+                z-index: 9999999999;
             }
             
             .fa-close {
@@ -248,16 +250,16 @@
                 
             .bx--grid-alt {
                 display: inline-block;
+                font-size: 1.8em;
                 width: 1em;
-                height: 1em;
                 --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M9 9H5V5h4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1m1-6h4v4h-4zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm2-5h4v4H5zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1zm2-5h4v4h-4z'/%3E%3C/svg%3E");
                 background-color: currentColor;
                 -webkit-mask-image: var(--svg);
                 mask-image: var(--svg);
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
-                -webkit-mask-size: 115% 115%;
-                mask-size: 115% 115%;
+                -webkit-mask-size: 100% 100%;
+                mask-size: 100% 100%;
             }
             
             
@@ -276,10 +278,11 @@
             }
             
             .product {
-                display: grid;
+                display: flex;
                 margin-top: 10px;
                 margin-left: auto;
                 margin-right: auto;
+                font-size: 1.6em;
                 justify-content: center;
                 border: solid 9px #555252;
                 border-radius: 7px;
@@ -302,7 +305,7 @@
                 top: 0.6rem;
                 padding: 2px 12px 2px 2px;
                 background: #ff5f55;
-                clip-path: polygon(100% 0%, 70% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             }
             
             .photos i {
@@ -316,6 +319,7 @@
                 position: absolute;
                 font-size: 1.4em;
                 top: 50%;
+                cursor: pointer;
             }
             
             #ar1 {
@@ -339,6 +343,7 @@
                 margin-left: 1%;
                 background: #fffc40;
                 width: 12ch;
+                height: 2.4ch;
                 padding: 0;
                 font-weight: 700;
             }
@@ -346,7 +351,7 @@
             .description button {
                 position: absolute;
                 margin: 8px;
-                right: 13px;
+                right: 4%;
                 border: none;
                 background-color: #1af30d;
                 font-size: 1.07em;
@@ -373,6 +378,35 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 8px;
+            }
+
+            .catalogue {
+                margin-top: 100px;
+            }
+
+            #toggle a {
+                display: flex;
+                font-weight: 800;
+                padding: 3%;
+            }
+
+            #toggle i {
+                margin-right: 7%;
+            }
+
+            #toggle a:hover {
+                background-color: #0bb102;
+                border: none;
+                border-radius: 12px;
+            }
+
+            @media only screen and (max-width: 1100px) {
+                .product {
+                    display: block;
+                }
+                .description {
+                    font-size: 1em;
+                }
             }
             
         </style>
@@ -407,22 +441,26 @@
                 
                 <nav>
                     <div class="navbar">
-                        <i class="fa fa-bars" id="menu"></i>
-                        <div class="hide" id="toggle">
-                            <a href="#homepage">
-                                <i class="fa fa-home"></i>
-                                Главная
-                            </a>
-                            <a href="#catalogue">
-                                <i class="bx--grid-alt"></i>
-                                Каталог
-                            </a>
-                            <a href="#cart">
-                                <i class="fa fa-shopping-cart"></i>
-                                Корзина
-                            </a>
-                        </div><!-- /#toggle -->
+                        <div class="flex">
+                            <i class="fa fa-bars" id="menu"></i>
+                        </div>
                     </div><!-- /.navbar -->
+
+                    <div class="hide" id="toggle">
+                        <a href="#homepage">
+                            <i class="fa fa-home"></i>
+                            Главная
+                        </a>
+                        <a href="#catalogue">
+                            <i class="bx--grid-alt"></i>
+                            Каталог
+                        </a>
+                        <a href="#cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            Корзина
+                        </a>
+                    </div><!-- /#toggle -->
+
                 </nav>
                 
                 <div class="lang">
@@ -433,6 +471,9 @@
                 </div>
                 
             </div>
+
+            
+
         </header>
         
         
@@ -473,15 +514,15 @@
                     <div id="m19" class="product">
                         
                         <div class="hide">
-                            <img src="m19-1.png" alt="4" name="1">
-                            <img src="m19-2.png" alt="4" name="2">
-                            <img src="m19-3.png" alt="4" name="3">
-                            <img src="m19-4.png" alt="4" name="4">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4">
                         </div>
                         
                         <div class="photos flex">
                             
-                            <img src="m19-1.png" alt="4" name="1">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
                             <b id="ar1">&larr;</b>
                             <b id="ar2">&rarr;</b>
                             <span>-29%</span>
@@ -541,7 +582,7 @@
         
         <footer>
             <div id="footer">
-                <img src="galaxymeshop.png" alt="galaxymeshop" class="mainImg">
+                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg">
                 <div class="about-us">
                     <h3>О нас</h3>
                     <div class="tab">
