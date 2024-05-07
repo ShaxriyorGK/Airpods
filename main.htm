@@ -13,9 +13,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Font Awesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Box icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png">
+        <!-- Icon -->
+        <link rel="icon" href="icon.png"><!-- Github -->
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +26,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
         <!-- for h3 name of a product -->
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Tapestry&display=swap" rel="stylesheet">
-        <!-- for button in the description -->
+        <!-- for button in the description and copyright -->
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=M+PLUS+Code+Latin:wght@100..700&family=Poetsen+One&family=Tapestry&display=swap" rel="stylesheet">
         
         <style>
@@ -36,7 +39,8 @@
         
         <style>
             
-            body {
+            body 
+            {
                 margin: 0;
                 padding: 0;
                 background: #D5F3F6;
@@ -44,7 +48,8 @@
                 width: 100%;
             }
             
-            header {
+            header
+            {
                 padding: 0;
                 margin: 0;
                 z-index: 9999999999;
@@ -56,35 +61,42 @@
                 top: 0;
             }
             
-            footer {
+            footer 
+            {
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                margin-top: 24px;
             }
             
-            .header {
+            .header 
+            {
                 justify-content: space-betwen!important;
                 text-align: center;
                 padding: 0;
                 background: #f6653d;
             }
             
-            .navbar {
+            .navbar 
+            {
                 display: grid;
                 place-items: center;
                 align-items: center;
                 justify-content: center;
             }
             
-            #menu {
+            #menu 
+            {
                 margin: 7px 170px;
             }
             
-            main {
+            main 
+            {
                 margin-top: 30px;
             }
             
-            h2 {
+            h2 
+            {
                 font-family: "Poetsen One", sans-serif;
                 font-weight: 400;
                 font-style: normal;
@@ -95,7 +107,8 @@
                 padding: 0;
             }
             
-            h1 {
+            h1 
+            {
                 font-family: "Alegreya", serif;
                 font-optical-sizing: auto;
                 font-weight: 600;
@@ -103,12 +116,16 @@
                 margin: 3px 10px;
             }
             
-            .display-none, .fas, .hide {
+            .display-none,
+            .fas,
+            .hide 
+            {
                 display: none;
             }
             
             
-            .lang {
+            .lang 
+            {
                 position: absolute;
                 top: 0;
                 right: 3px;
@@ -117,7 +134,8 @@
                 margin-top: 7px;
             }
             
-            .toggle {
+            .toggle 
+            {
                 display: grid;
                 background: #687C94;
                 justify-content: center;
@@ -126,23 +144,27 @@
                 padding: 0;
             }
             
-            #toggle {
+            #toggle 
+            {
                 transition: all 0.3s ease;
                 width: 100%;
                 z-index: 9999999999;
             }
             
-            .fa-close {
+            .fa-close 
+            {
                 font-size: 1.5em;
             }
             
-            a {
+            a 
+            {
                 text-decoration: none;
                 color: #95DEF3;
                 margin: 2px;
             }
             
-            #search {
+            #search 
+            {
                 width: 95%;
                 height: 28px;
                 margin: 5px 0;
@@ -151,7 +173,8 @@
                 border-radius: 12px;
             }
             
-            .mySwiper {
+            .mySwiper
+            {
                 width: 100%;
                 height: 180px;
                 box-shadow: unset!important;
@@ -160,7 +183,8 @@
                 z-index: 0!important;
             }
     
-            .swiper-slide {
+            .swiper-slide 
+            {
                 text-align: center;
                 font-size: 18px;
                 background: #fff;
@@ -171,51 +195,71 @@
                 z-index: 0!important;
             }
     
-            .swiper-slide img {
+            .swiper-slide img 
+            {
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
     
-            .swiper-button-next, .swiper-button-prev {
+            .swiper-button-next,
+            .swiper-button-prev 
+            {
                 font-size: 3em;
             }
             
-            .swiper-button-next {
+            .swiper-button-next
+            {
                 margin-right: -10px;
             }
             
-            .swiper-button-prev {
+            .swiper-button-prev
+            {
                 margin-left: -10px;
             }
             
-            .fa {
+            .fa
+            {
                 font-size: 20px;
             }
             
+            .bx
+            {
+                font-size: 1.8em;
+                display: block;
+                height: 0.66em;
+                width: 100%;
+                padding: 0;
+                margin-top: 0;
+            }
             
-            .flex {
+            .flex
+            {
                 display: flex;
                 justify-content: center;
             }
             
-            p {
+            p
+            {
                 margin-top: 0;
             }
             
-            #footer {
+            #footer 
+            {
                 padding: 10px 3px;
                 margin: 0;
                 width: 100%; /* */
                 background: #BEBCC4;
             }
             
-            .mainImg {
+            .mainImg 
+            {
                 width: 100%;
             }
             
-            h3 {
+            h3 
+            {
                 padding: 4px;
                 margin: 1px;
                 font-family: "Tapestry", serif;
@@ -223,23 +267,27 @@
                 font-style: normal;
             }
             
-            #small {
+            #small 
+            {
                 font-size: 23px;
                 text-decoration: none;
                 color: #000;
                 margin: 3px;
             }
             
-            .tab {
+            .tab 
+            {
                 margin-left: 12px;
-                margin-top: -20px;
+                margin-top: 5px;
             }
             
-            .copy {
+            .copy 
+            {
                 margin-top: 17px;
             }
 
-            #buy {
+            #buy 
+            {
                 padding: 2% 24%;
                 font-size: 33px;
                 position: fixed;
@@ -248,7 +296,8 @@
                 background: #1AF30D;
             }
                 
-            .bx--grid-alt {
+            .bx--grid-alt 
+            {
                 display: inline-block;
                 font-size: 1.8em;
                 width: 1em;
@@ -263,83 +312,103 @@
             }
             
             
-            select {
+            select 
+            {
                 color: #D5F3F6;
                 background: #000;
                 border-radius: 20px;
             }
             
-            #catalogue {
+            section
+            {
                 margin-top: 20px;
             }
             
-            .catalogue {
+            .heading 
+            {
+                margin-top: 50px;
+            }
+            
+            .catalogue 
+            {
                 display: grid;
             }
             
-            .product {
+            .product 
+            {
                 display: flex;
                 margin-top: 10px;
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 1.6em;
+                font-size: 1.4em;
                 justify-content: center;
                 border: solid 9px #555252;
                 border-radius: 7px;
                 width: 92%;
             }
             
-            .photos {
+            .photos 
+            {
                 position: relative;
             }
             
-            .photos img {
+            .photos img 
+            {
                 border: none;
                 border-radius: 8px;
                 width: 100%;
             }
             
-            .photos span {
+            .photos span 
+            {
                 position: absolute;
                 left: 0;
                 top: 0.6rem;
-                padding: 2px 12px 2px 2px;
-                background: #ff5f55;
-                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                padding: 2px 16px 2px 2px;
+                background-color: #ff5f55;
+                clip-path: polygon(100% 0%, 76% 50%, 100% 100%, 0% 100%, 0% 0%);
             }
             
-            .photos i {
+            .photos i 
+            {
                 position: absolute;
                 top: 0.6rem;
                 right: 0.6rem;
                 font-size: 1.5em;
             }
             
-            b {
+            b 
+            {
                 position: absolute;
                 font-size: 1.4em;
                 top: 50%;
                 cursor: pointer;
             }
             
-            #ar1 {
-                left: 2%;
+            #ar1 
+            {
+                left: 1%;
             }
             
-            #ar2 {
-                right: 2%;
+            #ar2 
+            {
+                right: 1%;
             }
             
-            .description {
+            .description 
+            {
                 display: grid;
+                font-size: 1em;
             }
             
-            del {
+            del 
+            {
                 margin-left: 1%;
                 color: #909090;
             }
             
-            .h {
+            .h 
+            {
                 margin-left: 1%;
                 background: #fffc40;
                 width: 12ch;
@@ -348,17 +417,21 @@
                 font-weight: 700;
             }
             
-            .description button {
+            .description button 
+            {
                 position: absolute;
                 margin: 8px;
+                padding: 2px;
                 right: 4%;
-                border: none;
+                border: solid 1.7px;
                 background-color: #1af30d;
                 font-size: 1.07em;
                 border-radius: 12px;
             }
             
-            .description button, .copy {
+            .description button,
+            .copy 
+            {
                 font-family: "M PLUS Code Latin", monospace;
                 font-optical-sizing: auto;
                 font-weight: 500;
@@ -366,46 +439,106 @@
                 font-variation-settings: "wdth" 100;
             }
             
-            .cart {
+            .cart
+            {
                 display: block;
                 justify-content: center;
             }
             
-            .el-in-cart {
+            .el-in-cart 
+            {
                 border: solid 2px;
                 border-radius: 10px;
-                width: 97%;
+                width: 96%;
+                height: 40px;
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 8px;
             }
 
-            .catalogue {
-                margin-top: 100px;
+            .catalogue
+            {
+                margin-top: 10px;
             }
 
-            #toggle a {
+            #toggle a 
+            {
                 display: flex;
                 font-weight: 800;
                 padding: 3%;
             }
 
-            #toggle i {
+            #toggle i 
+            {
                 margin-right: 7%;
             }
 
-            #toggle a:hover {
+            #toggle a:hover 
+            {
                 background-color: #0bb102;
                 border: none;
                 border-radius: 12px;
             }
+            
+            .el-in-cart img,
+            .el-in-cart h3,
+            .el-in-cart p, 
+            .el-in-cart i, 
+            .cart .flex button p,
+            .cart .flex button i,
+            .cart .flex button img 
+            {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            
+            .el-in-cart img 
+            {
+                position: absolute;
+                left: 1.93%;
+                border-radius: 9px;
+            }
+            
+            .el-in-cart i 
+            {
+                position: absolute;
+                right: 3.5%;
+                font-size: 2.2em;
+            }
+            
+            .cart button
+            {
+                width: 48%;
+                height: 28px;
+                margin: 1px;
+                margin-bottom: 8px;
+                display: flex;
+                padding: 0;
+                justify-content: center;
+                border: solid 2px;
+                border-radius: 9px;
+                background: #1af30d;
+            }
+            
+            .cart button i 
+            {
+                margin: 0;
+            }
+            
+            .cart button img 
+            {
+                width: 10%;
+            }
 
-            @media only screen and (max-width: 1100px) {
-                .product {
+            @media only screen and (max-width: 1100px) 
+            {
+                .product 
+                {
                     display: block;
                 }
-                .description {
-                    font-size: 1em;
+                .description 
+                {
+                    font-size: 0.6em;
                 }
             }
             
@@ -507,22 +640,22 @@
             
             <section id="catalogue">
                 
-                <h1>Каталог</h1>
+                <h1 class="heading">Каталог</h1>
                 
                 <div class="catalogue">
                     
                     <div id="m19" class="product">
                         
                         <div class="hide">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3">
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4">
+                            <img src="m19-1.png" alt="4" name="1"><!-- Github -->
+                            <img src="m19-2.png" alt="4" name="2"><!-- Github -->
+                            <img src="m19-3.png" alt="4" name="3"><!-- Github -->
+                            <img src="m19-4.png" alt="4" name="4"><!-- Github -->
                         </div>
                         
                         <div class="photos flex">
                             
-                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1">
+                            <img src="m19-1.png" alt="4" name="1"><!-- Github -->
                             <b id="ar1">&larr;</b>
                             <b id="ar2">&rarr;</b>
                             <span>-29%</span>
@@ -550,6 +683,8 @@
                         </div>
                         
                     </div><!-- /#m19.product -->
+                    
+                    
                     
                     
                     
@@ -582,7 +717,7 @@
         
         <footer>
             <div id="footer">
-                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg">
+                <img src="galaxymeshop.png" alt="galaxymeshop" class="mainImg"><!-- Github -->
                 <div class="about-us">
                     <h3>О нас</h3>
                     <div class="tab">
@@ -717,7 +852,7 @@
             
             document.querySelector('#menu').addEventListener('click', function() {
                 if (this.getAttribute(c) == 'fa fa-bars') {
-                    this.setAttribute(c, 'fa fa-close')
+                    this.setAttribute(c, 'bx bx-x')
                     toggle.setAttribute(c, 'toggle')
                 } else {
                     this.setAttribute(c, 'fa fa-bars')
@@ -739,22 +874,47 @@
                 id = product[j].id
                 document.querySelector('#' + id + '-to-cart').addEventListener('click', function() {
                     newEl = `
-                        <div class="el-in-cart flex" onclick="alert(true)">
+                        <div class="el-in-cart flex" id="${id}-cart">
                             <img src="${id}-1.png" alt="" height="40">
                             <h3>${document.querySelector('#'+ id + '-name').innerHTML}</h3>
-                            <span>${document.querySelector('#' + id + '-price').innerHTML}</span>
+                            <p>${document.querySelector('#' + id + '-price').innerHTML}</p>
+                            <i class='fa fa-trash'></i>
                         </div>
                     `
                     if (cart.innerHTML.includes('Пусто')) {
-                        cart.innerHTML = newEl
-                        alert(true)
+                        cart.innerHTML = `
+                            <div class="flex">
+                                <button onclick="buyAll()">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <p>Купить все</p>
+                                </button>
+                                <button onclick="removeAll()">
+                                    <img src="broom.png" alt="">
+                                    <p>Убрать все</p>
+                                </button>
+                            </div>
+                        ` + newEl
                     } else {
                         cart.innerHTML += newEl
                     }
+                    
+                    readyCart()
+                    
                 })
                 
             }
             
+            readyCart = () => {
+                elements = document.querySelectorAll('.el-in-cart')
+            
+                for (l = 0; l < elements.length; l++) {
+                    elements[l].addEventListener('click', function() {
+                        location.href = '#' + this.id.slice(0, -5)
+                    })
+                }
+            }
+            
+            readyCart()
             
         </script>
         
