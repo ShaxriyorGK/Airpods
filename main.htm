@@ -1,6 +1,9 @@
 <!-- Created  by Shakhriyor Sanatov -->
 <!-- http://t.me/Shaxriyor_programmer -->
 
+<!-- Github link to images -->
+<!-- https://raw.githubusercontent.com/ShaxriyorGK/Img/main/imgname.png -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- Icon -->
-        <link rel="icon" href="icon.png"><!-- Github -->
+        <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/icon.png"><!-- Github -->
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -397,7 +400,6 @@
             
             .description 
             {
-                display: grid;
                 font-size: 1em;
             }
             
@@ -527,7 +529,11 @@
             
             .cart button img 
             {
-                width: 10%;
+                width: 19px;
+            }
+
+            .price {
+                display: block;
             }
 
             @media only screen and (max-width: 1100px) 
@@ -536,10 +542,20 @@
                 {
                     display: block;
                 }
+
                 .description 
                 {
                     font-size: 0.6em;
+                    display: grid;
+                    align-items: unset;
                 }
+
+                .description h3,
+                .description div,
+                .description ul {
+                    margin-top: 0.4em;
+                }
+
             }
             
         </style>
@@ -647,15 +663,15 @@
                     <div id="m19" class="product">
                         
                         <div class="hide">
-                            <img src="m19-1.png" alt="4" name="1"><!-- Github -->
-                            <img src="m19-2.png" alt="4" name="2"><!-- Github -->
-                            <img src="m19-3.png" alt="4" name="3"><!-- Github -->
-                            <img src="m19-4.png" alt="4" name="4"><!-- Github -->
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1"><!-- Github -->
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-2.png" alt="4" name="2"><!-- Github -->
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-3.png" alt="4" name="3"><!-- Github -->
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-4.png" alt="4" name="4"><!-- Github -->
                         </div>
                         
                         <div class="photos flex">
                             
-                            <img src="m19-1.png" alt="4" name="1"><!-- Github -->
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/m19-1.png" alt="4" name="1"><!-- Github -->
                             <b id="ar1">&larr;</b>
                             <b id="ar2">&rarr;</b>
                             <span>-29%</span>
@@ -667,8 +683,12 @@
                             
                             <button id="m19-btn">Купить</button>
                             <h3 id="m19-name">M19 наушники</h3>
-                            <del>69 000 сумов</del>
-                            <span class="h" id="m19-price">49 000 сумов</span>
+                            <div class="price">
+                                <p style="">Цена:</p>
+                                <br>
+                                <del>69 000 сумов</del>
+                                <span class="h" id="m19-price">49 000 сумов</span>
+                            </div>
                             <ul>
                                 <li>Android va iOS bilan mos keladi</li>
                                 <li>Boy bass</li>
@@ -717,7 +737,7 @@
         
         <footer>
             <div id="footer">
-                <img src="galaxymeshop.png" alt="galaxymeshop" class="mainImg"><!-- Github -->
+                <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/galaxymeshop.png" alt="galaxymeshop" class="mainImg"><!-- Github -->
                 <div class="about-us">
                     <h3>О нас</h3>
                     <div class="tab">
@@ -875,7 +895,7 @@
                 document.querySelector('#' + id + '-to-cart').addEventListener('click', function() {
                     newEl = `
                         <div class="el-in-cart flex" id="${id}-cart">
-                            <img src="${id}-1.png" alt="" height="40">
+                            <img src="https://raw.githubusercontent.com/ShaxriyorGK/Img/main/${id}-1.png" alt="" height="40">
                             <h3>${document.querySelector('#'+ id + '-name').innerHTML}</h3>
                             <p>${document.querySelector('#' + id + '-price').innerHTML}</p>
                             <i class='fa fa-trash'></i>
@@ -889,7 +909,7 @@
                                     <p>Купить все</p>
                                 </button>
                                 <button onclick="removeAll()">
-                                    <img src="broom.png" alt="">
+                                    <img src="https://cdn1.iconfinder.com/data/icons/zoldo-miscellaneous-005/64/broom_clear-512.png" alt="">
                                     <p>Убрать все</p>
                                 </button>
                             </div>
